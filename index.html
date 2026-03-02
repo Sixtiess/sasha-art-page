@@ -1,13 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Catan - Unofficial</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth & Echoes | Art Journal</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">Earth & Echoes</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section reveal">
+        <div class="hero-content">
+          <p class="eyebrow">A personal passion project</p>
+          <h1>This is my little art corner on the internet.</h1>
+          <p>
+            A lot of this is inspired by Santa Barbara light — ocean haze in the mornings,
+            palm shadows in the afternoon, and all the soft greens along the trails.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="gallery.html">See My Pieces</a>
+            <a class="button ghost" href="about.html">Read My Notes</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="sun"></span>
+          <img class="palm-clipart" src="https://www.svgrepo.com/show/530671/palm-tree.svg" alt="" />
+          <img class="leaf-clipart leaf-a" src="https://www.svgrepo.com/show/475682/leaf.svg" alt="" />
+          <img class="leaf-clipart leaf-b" src="https://www.svgrepo.com/show/475682/leaf.svg" alt="" />
+          <span class="horizon"></span>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Recent Pieces</h2>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://placehold.co/900x700/d3d3d3/6b6b6b?text=Piece+%231" alt="Gray placeholder for Piece #1" />
+            <div class="card-body">
+              <h3>Piece #1</h3>
+              <p>Work in progress</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://placehold.co/900x700/d3d3d3/6b6b6b?text=Piece+%232" alt="Gray placeholder for Piece #2" />
+            <div class="card-body">
+              <h3>Piece #2</h3>
+              <p>Work in progress</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://placehold.co/900x700/d3d3d3/6b6b6b?text=Piece+%233" alt="Gray placeholder for Piece #3" />
+            <div class="card-body">
+              <h3>Piece #3</h3>
+              <p>Work in progress</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quote reveal">
+        <blockquote>
+          “I’m trying to paint the same calm I feel near the coast when the wind moves through the palms.”
+        </blockquote>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Earth & Echoes · Personal project · Made with love ♡</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
