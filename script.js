@@ -74,3 +74,19 @@ if (hasArtworkData && artworkPage) {
   document.querySelector('#artwork-stage').textContent = artwork.stage;
   document.querySelector('#artwork-story').textContent = artwork.story;
 }
+
+const filters = document.querySelectorAll('.filter');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filters.forEach((filter) => {
+  filter.addEventListener('click', () => {
+    filters.forEach((button) => button.classList.remove('active'));
+    filter.classList.add('active');
+
+    const selected = filter.dataset.filter;
+    galleryItems.forEach((item) => {
+      const show = selected === 'all' || item.dataset.type === selected;
+      item.classList.toggle('hidden', !show);
+    });
+  });
+});

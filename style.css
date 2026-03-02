@@ -184,57 +184,35 @@ p {
 
 .hero-art {
   height: min(66vw, 440px);
-  border-radius: 30px;
-  background: linear-gradient(180deg, #d8f1f5 0%, #e9f7df 54%, #f8e5c9 100%);
+  border-radius: 38% 62% 44% 56% / 54% 39% 61% 46%;
+  background:
+    radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.7), transparent 42%),
+    linear-gradient(140deg, #cdeccb 0%, #f3ddca 44%, #bcdcb2 100%);
   position: relative;
   border: 1px solid rgba(105, 168, 127, 0.2);
   box-shadow: 0 20px 44px rgba(111, 149, 122, 0.24);
-  overflow: hidden;
+  animation: sway 8s ease-in-out infinite;
 }
 
-.hero-art .sun {
+.hero-art::before,
+.hero-art::after {
+  content: "";
   position: absolute;
-  top: 14%;
-  right: 14%;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fff6be 0%, #ffd884 70%);
 }
 
-.hero-art .horizon {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 34%;
-  background: linear-gradient(180deg, rgba(98, 168, 143, 0.25), rgba(88, 134, 111, 0.55));
+.hero-art::before {
+  inset: 14% 16% 22% 14%;
+  border-radius: 51% 49% 64% 36% / 40% 54% 46% 60%;
+  border: 2px dashed rgba(103, 152, 117, 0.45);
 }
 
-.hero-art .palm-clipart {
-  position: absolute;
-  width: 185px;
-  left: 38%;
-  bottom: 13%;
-  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1));
-}
-
-.hero-art .leaf-clipart {
-  position: absolute;
-  width: 86px;
-  opacity: 0.75;
-}
-
-.hero-art .leaf-a {
-  left: 8%;
-  bottom: 26%;
-  transform: rotate(-16deg);
-}
-
-.hero-art .leaf-b {
+.hero-art::after {
+  width: 46%;
+  height: 46%;
   right: 10%;
-  top: 34%;
-  transform: rotate(22deg) scaleX(-1);
+  bottom: 10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(147, 201, 161, 0.5) 0%, rgba(255, 255, 255, 0.2) 58%, transparent 70%);
 }
 
 .hero-actions {
@@ -443,6 +421,16 @@ textarea {
   }
   to {
     transform: translateY(-14px) rotate(8deg);
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    border-radius: 38% 62% 44% 56% / 54% 39% 61% 46%;
+  }
+  50% {
+    border-radius: 46% 54% 56% 44% / 44% 56% 44% 56%;
   }
 }
 
